@@ -1,11 +1,9 @@
-from re import S
-from pydantic import BaseModel
 from typing import Optional
+from pydantic import BaseModel
 
-class User(BaseModel):
-    first_name:str
-    last_name:str
-    age:int
-    sex:Optional[str]=None
-    
-    
+
+class Post(BaseModel):
+    title: str
+    content: str
+    published: bool = True
+    rating: Optional[int] = None
